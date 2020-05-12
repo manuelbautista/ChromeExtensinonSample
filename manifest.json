@@ -1,0 +1,33 @@
+{
+    "name": "Youtube Dark Mode",
+    "version": "1.0.0",
+    "description": "This extension turn youtube background in black",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js", "backgroundMessaging.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {            
+            "matches": ["https://*.youtube.com/*"],
+            "exclude_matches": ["https://*.youtube.com/watch*"],
+            "js": ["content.js", "contentMessaging.js", "contentRequest.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "bookmarks", 
+        "storage", 
+        "tabs", 
+        "https://api.github.com/"
+    ],
+    "icons": {
+        "16": "darkmode.png",
+        "48": "darkmode.png",
+        "128": "darkmode.png"
+    },
+    "browser_action": {
+        "default_title": "Created by Manuel",
+        "default_popup": "popup.html"
+    }
+}
