@@ -1,9 +1,7 @@
 document.getElementById("btnHello").addEventListener('click', ()=> {
     
     popup();
-    //alert('Hola mundo');
     this.close();
-
 })
 
 function popup() {
