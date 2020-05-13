@@ -26,8 +26,7 @@ function checkSetting() {
         }
     })
 }
-function storeSetting() {
-    
+function storeSetting() {    
     const isEnabled = document.getElementById('darkSetting').checked;
     const setting = {enabled: isEnabled, color: 'purple'};
     
