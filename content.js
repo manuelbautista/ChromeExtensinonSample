@@ -27,7 +27,7 @@ function checkSetting() {
     })
 }
 function storeSetting() {
-    //TODO
+    
     const isEnabled = document.getElementById('darkSetting').checked;
     const setting = {enabled: isEnabled, color: 'purple'};
     
